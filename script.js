@@ -49,16 +49,36 @@
 // draws get 1 point
 // losses get 0 points
 
-function footballPoints(wins, draws, losses){
-    return wins*3 + draws*1 + losses*0;
+// function footballPoints(wins, draws, losses){
+//     return wins*3 + draws*1 + losses*0;
     
+// }
+
+// console.log(footballPoints(3, 4, 2)); //➞ 13
+// console.log(footballPoints(5, 0, 2)); //➞ 15
+// console.log(footballPoints(0, 0, 1)); //➞ 0
+
+
+
+
+
+// Q6: Create a function that will handle simple math expressions. The input is an expression in the form of a string.
+function calculator(expression) {
+    try {
+        // Evaluate the expression using JavaScript's built-in eval function
+        let result = eval(expression);
+        return result;
+    } catch (error) {
+        // Handle errors gracefully
+        return `Error: ${error.message}`;
+    }
 }
 
-console.log(footballPoints(3, 4, 2)); //➞ 13
-console.log(footballPoints(5, 0, 2)); //➞ 15
-console.log(footballPoints(0, 0, 1)); //➞ 0
-
-
+// Examples
+console.log(calculator("23+4"));       // ➞ 27
+console.log(calculator("45-15"));      // ➞ 30
+console.log(calculator("13+2-5*2"));   // ➞ 5
+console.log(calculator("49/7*2-3"));   // ➞ 11
 
 
 
