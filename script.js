@@ -100,13 +100,24 @@
 
 
 // Q8: Create a function that calculates the area of a rectangle. If the arguments are invalid, your function must return -1.
-function area(height , width){
-    return height * width;
+// function area(height , width){
+//     return height * width;
+// }
+
+// console.log(area(3, 4)); //➞ 12
+// console.log(area(10, 11)); //➞ 110
+// console.log(area(-1, 5)); //➞ -5
+// console.log(area(0, 2)); //➞ -1
+
+
+
+
+// Q9: Create a function that returns how many possible arrangements can come from a certain number of switches (on / off). In other words, for a given number of switches, how many different patterns of on and off can we have?
+function posCom(num){
+    return Math.pow(2,num);
 }
 
-console.log(area(3, 4)); //➞ 12
-console.log(area(10, 11)); //➞ 110
-console.log(area(-1, 5)); //➞ -1
-console.log(area(0, 2)); //➞ -1
-
+console.log(posCom(1)); //➞ 2
+console.log(posCom(3)); //➞ 8
+console.log(posCom(10)); //➞ 1024
 
