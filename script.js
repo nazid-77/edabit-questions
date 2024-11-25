@@ -141,17 +141,32 @@
 // Q11: A leap year happens every four years, so it's a year that is perfectly divisible by four. However, if the year is a multiple of 100 (1800, 1900, etc), the year must be divisible by 400.
 // Write a function that determines if the year is a leap year or not.
 
-function leapYear(num){
-    if( num % 4 == 0){
-        return true;
-    }else{
-        return false;
-    }
+// function leapYear(num){
+//     if( num % 4 == 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// console.log(leapYear(2020)); //➞ true
+// console.log(leapYear(2021)); //➞ false
+// console.log(leapYear(1968)); //➞ true
+
+
+
+
+// Q12: Here's an image of four models. Some of the cubes are hidden behind other cubes. Model one consists of one cube. Model two consists of four cubes, and so on...
+// Stack the Boxes
+// Write a function that takes a number n and returns the number of stacked boxes in a model n levels high, visible and invisible.
+
+function stackBoxes(num){
+    return num * num;
 }
 
-console.log(leapYear(2020)); //➞ true
-console.log(leapYear(2021)); //➞ false
-console.log(leapYear(1968)); //➞ true
+console.log(stackBoxes(1)); //➞ 1
+console.log(stackBoxes(2)); //➞ 4
+console.log(stackBoxes(0)); //➞ 0
 
 
 
