@@ -126,11 +126,93 @@
 
 // Q10: Create a function that calculates the chance of being an imposter. The formula for the chances of being an imposter is 100 × (i / p) where i is the imposter count and p is the player count. Make sure to round the value to the nearest integer and return the value as a percentage.
 
-function imposterFormula(i,p){
-    let result = Math.floor(100 * (i / p));
-    return result + "%";
+// function imposterFormula(i,p){
+//     let result = Math.floor(100 * (i / p));
+//     return result + "%";
+// }
+
+// console.log(imposterFormula(1, 10)); //➞ "10%"
+// console.log(imposterFormula(2, 5)); //➞ "40%"
+// console.log(imposterFormula(1, 8)); //➞ "13%"
+
+
+
+
+// Q11: A leap year happens every four years, so it's a year that is perfectly divisible by four. However, if the year is a multiple of 100 (1800, 1900, etc), the year must be divisible by 400.
+// Write a function that determines if the year is a leap year or not.
+
+function leapYear(num){
+    if( num % 4 == 0){
+        return true;
+    }else{
+        return false;
+    }
 }
 
-console.log(imposterFormula(1, 10)); //➞ "10%"
-console.log(imposterFormula(2, 5)); //➞ "40%"
-console.log(imposterFormula(1, 8)); //➞ "13%"
+console.log(leapYear(2020)); //➞ true
+console.log(leapYear(2021)); //➞ false
+console.log(leapYear(1968)); //➞ true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
