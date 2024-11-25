@@ -63,23 +63,37 @@
 
 
 // Q6: Create a function that will handle simple math expressions. The input is an expression in the form of a string.
-function calculator(expression) {
-    try {
-        // Evaluate the expression using JavaScript's built-in eval function
-        let result = eval(expression);
-        return result;
-    } catch (error) {
-        // Handle errors gracefully
-        return `Error: ${error.message}`;
+// function calculator(expression) {
+//     try {
+//         // Evaluate the expression using JavaScript's built-in eval function
+//         let result = eval(expression);
+//         return result;
+//     } catch (error) {
+//         // Handle errors gracefully
+//         return `Error: ${error.message}`;
+//     }
+// }
+
+// // Examples
+// console.log(calculator("23+4"));       // ➞ 27
+// console.log(calculator("45-15"));      // ➞ 30
+// console.log(calculator("13+2-5*2"));   // ➞ 5
+// console.log(calculator("49/7*2-3"));   // ➞ 11
+
+
+
+
+// Q7: Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+function divisible(num){
+    if(num % 100 == 0){
+        return true;
+    }else{
+        return false;
     }
 }
 
-// Examples
-console.log(calculator("23+4"));       // ➞ 27
-console.log(calculator("45-15"));      // ➞ 30
-console.log(calculator("13+2-5*2"));   // ➞ 5
-console.log(calculator("49/7*2-3"));   // ➞ 11
-
-
+console.log(divisible(1)); //➞ false
+console.log(divisible(1000)); //➞ true
+console.log(divisible(100)); //➞ true
 
 
