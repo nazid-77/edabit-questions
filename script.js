@@ -84,16 +84,29 @@
 
 
 // Q7: Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
-function divisible(num){
-    if(num % 100 == 0){
-        return true;
-    }else{
-        return false;
-    }
+// function divisible(num){
+//     if(num % 100 == 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// console.log(divisible(1)); //➞ false
+// console.log(divisible(1000)); //➞ true
+// console.log(divisible(100)); //➞ true
+
+
+
+
+// Q8: Create a function that calculates the area of a rectangle. If the arguments are invalid, your function must return -1.
+function area(height , width){
+    return height * width;
 }
 
-console.log(divisible(1)); //➞ false
-console.log(divisible(1000)); //➞ true
-console.log(divisible(100)); //➞ true
+console.log(area(3, 4)); //➞ 12
+console.log(area(10, 11)); //➞ 110
+console.log(area(-1, 5)); //➞ -1
+console.log(area(0, 2)); //➞ -1
 
 
