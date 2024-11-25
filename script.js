@@ -23,10 +23,21 @@
 
 
 // Q3: Create a function that takes the age in years and returns the age in days.
-function calcAge(num){
-    return num * 365;
+// function calcAge(num){
+//     return num * 365;
+// }
+
+// console.log(calcAge(65)); //➞ 23725
+// console.log(calcAge(0)); //➞ 0
+// console.log(calcAge(20)); //➞ 7300
+
+
+
+// Q:4 create a function for generate square of number
+function square(num){
+    return num * num;
 }
 
-console.log(calcAge(65)); //➞ 23725
-console.log(calcAge(0)); //➞ 0
-console.log(calcAge(20)); //➞ 7300
+console.log(square(5)); //➞ 25
+console.log(square(9)); //➞ 81
+console.log(square(100)); //➞ 10000
