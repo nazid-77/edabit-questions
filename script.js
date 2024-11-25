@@ -113,11 +113,24 @@
 
 
 // Q9: Create a function that returns how many possible arrangements can come from a certain number of switches (on / off). In other words, for a given number of switches, how many different patterns of on and off can we have?
-function posCom(num){
-    return Math.pow(2,num);
+// function posCom(num){
+//     return Math.pow(2,num);
+// }
+
+// console.log(posCom(1)); //➞ 2
+// console.log(posCom(3)); //➞ 8
+// console.log(posCom(10)); //➞ 1024
+
+
+
+
+// Q10: Create a function that calculates the chance of being an imposter. The formula for the chances of being an imposter is 100 × (i / p) where i is the imposter count and p is the player count. Make sure to round the value to the nearest integer and return the value as a percentage.
+
+function imposterFormula(i,p){
+    let result = Math.floor(100 * (i / p));
+    return result + "%";
 }
 
-console.log(posCom(1)); //➞ 2
-console.log(posCom(3)); //➞ 8
-console.log(posCom(10)); //➞ 1024
-
+console.log(imposterFormula(1, 10)); //➞ "10%"
+console.log(imposterFormula(2, 5)); //➞ "40%"
+console.log(imposterFormula(1, 8)); //➞ "13%"
