@@ -160,19 +160,29 @@
 // Stack the Boxes
 // Write a function that takes a number n and returns the number of stacked boxes in a model n levels high, visible and invisible.
 
-function stackBoxes(num){
-    return num * num;
+// function stackBoxes(num){
+//     return num * num;
+// }
+
+// console.log(stackBoxes(1)); //➞ 1
+// console.log(stackBoxes(2)); //➞ 4
+// console.log(stackBoxes(0)); //➞ 0
+
+
+
+
+
+// Q13: Given a Rubik's Cube with a side length of n, return the number of individual stickers that are needed to cover the whole cube.
+// The Rubik's cube of side length 1 has 6 stickers.
+// The Rubik's cube of side length 2 has 24 stickers.
+// The Rubik's cube of side length 3 has 54 stickers.
+
+function howManyStickers(num){
+    return num * (num * 6);
 }
-
-console.log(stackBoxes(1)); //➞ 1
-console.log(stackBoxes(2)); //➞ 4
-console.log(stackBoxes(0)); //➞ 0
-
-
-
-
-
-
+console.log(howManyStickers(1)); //➞ 6
+console.log(howManyStickers(2)); //➞ 24
+console.log(howManyStickers(3)); //➞ 54
 
 
 
