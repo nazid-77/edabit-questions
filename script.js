@@ -259,24 +259,38 @@
 // Q17: Create a function that inverts the rgb values of a given tuple.
 // (255, 255, 255) is the color white.
 // The opposite is (0, 0, 0), which is black.
-function colorInvert(rgb) {
-    if(!Array.isArray(rgb)|| rgb.length!=3){
-        console.log("error occurs")
-    }
-    const inverted = rgb.map(value => 255-value);
-    return inverted;
+// function colorInvert(rgb) {
+//     if(!Array.isArray(rgb)|| rgb.length!=3){
+//         console.log("error occurs")
+//     }
+//     const inverted = rgb.map(value => 255-value);
+//     return inverted;
+// }
+
+// console.log(colorInvert([255, 255, 255])); //➞ [0, 0, 0]
+// console.log(colorInvert([0, 0, 0])); //➞ [255, 255, 255]
+// console.log(colorInvert([165, 170, 221])); //➞ [90, 85, 34]
+
+
+
+
+
+
+// Q18: Given a number n, find if its 2nd, 4th and 8th roots are all integers (perfect roots), return true if it exists, false if not.
+function perfectRoots(n) {
+	const secondroot = Math.sqrt(n);
+    const fourthroot = Math.sqrt(secondroot);
+    const eighthroot = Math.sqrt(fourthroot);
+
+    return Number.isInteger(secondroot) && Number.isInteger(fourthroot) && Number.isInteger(eighthroot)
 }
 
-console.log(colorInvert([255, 255, 255])); //➞ [0, 0, 0]
-console.log(colorInvert([0, 0, 0])); //➞ [255, 255, 255]
-console.log(colorInvert([165, 170, 221])); //➞ [90, 85, 34]
-
-
-
-
-
-
-
+console.log(perfectRoots(256)); //➞ true
+// 2nd root of 256 is 16
+// 4th root of 256 is 4
+// 8th root of 256 is 2
+console.log(perfectRoots(1000)); //➞ false
+console.log(perfectRoots(6561)); //➞ true
 
 
 
