@@ -208,22 +208,49 @@
 
 // Q15:Create a function that takes a positive integer n and returns the nth "star number".
 // A star number is a centered figurate number that represents a centered hexagram (six-pointed star), such as the one that Chinese checkers is played on. star numbers for 1, 2 and 3
-function starNumber(n){
-    return  6 * n *( n - 1 ) + 1;
+// function starNumber(n){
+//     return  6 * n *( n - 1 ) + 1;
+// }
+
+// console.log(starNumber(2)); //➞ 13
+// // n = 2
+// // 2nd star number = 13
+
+// console.log(starNumber(3)); //➞ 37
+// // n = 3
+// // 3rd star number = 37
+
+// console.log(starNumber(5)); //➞ 121
+// // n = 5
+// // 5th star number = 121
+
+
+
+
+
+// Q16: Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+// Total number of slices.
+// Number of recipients.
+// How many slices each person gets.
+// The function will be in this form:
+
+function equalSlices(total, num, each){
+    if(num * each <= total){
+        return true;
+    }else{
+        return false;
+    }
 }
 
-console.log(starNumber(2)); //➞ 13
-// n = 2
-// 2nd star number = 13
+console.log(equalSlices(11, 5, 2)); //➞ true
+// 5 people x 2 slices each = 10 slices < 11 slices
 
-console.log(starNumber(3)); //➞ 37
-// n = 3
-// 3rd star number = 37
+console.log(equalSlices(11, 5, 3)); //➞ false
+// 5 people x 3 slices each = 15 slices > 11 slices
 
-console.log(starNumber(5)); //➞ 121
-// n = 5
-// 5th star number = 121
-
+console.log(equalSlices(8, 3, 2)); //➞ true
+console.log(equalSlices(8, 3, 3)); //➞ false
+console.log(equalSlices(24, 12, 2)); //➞ true
 
 
 
