@@ -234,29 +234,42 @@
 // How many slices each person gets.
 // The function will be in this form:
 
-function equalSlices(total, num, each){
-    if(num * each <= total){
-        return true;
-    }else{
-        return false;
+// function equalSlices(total, num, each){
+//     if(num * each <= total){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+// console.log(equalSlices(11, 5, 2)); //➞ true
+// // 5 people x 2 slices each = 10 slices < 11 slices
+
+// console.log(equalSlices(11, 5, 3)); //➞ false
+// // 5 people x 3 slices each = 15 slices > 11 slices
+
+// console.log(equalSlices(8, 3, 2)); //➞ true
+// console.log(equalSlices(8, 3, 3)); //➞ false
+// console.log(equalSlices(24, 12, 2)); //➞ true
+
+
+
+
+
+// Q17: Create a function that inverts the rgb values of a given tuple.
+// (255, 255, 255) is the color white.
+// The opposite is (0, 0, 0), which is black.
+function colorInvert(rgb) {
+    if(!Array.isArray(rgb)|| rgb.length!=3){
+        console.log("error occurs")
     }
+    const inverted = rgb.map(value => 255-value);
+    return inverted;
 }
 
-console.log(equalSlices(11, 5, 2)); //➞ true
-// 5 people x 2 slices each = 10 slices < 11 slices
-
-console.log(equalSlices(11, 5, 3)); //➞ false
-// 5 people x 3 slices each = 15 slices > 11 slices
-
-console.log(equalSlices(8, 3, 2)); //➞ true
-console.log(equalSlices(8, 3, 3)); //➞ false
-console.log(equalSlices(24, 12, 2)); //➞ true
-
-
-
-
-
-
+console.log(colorInvert([255, 255, 255])); //➞ [0, 0, 0]
+console.log(colorInvert([0, 0, 0])); //➞ [255, 255, 255]
+console.log(colorInvert([165, 170, 221])); //➞ [90, 85, 34]
 
 
 
