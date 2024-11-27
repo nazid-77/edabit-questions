@@ -277,26 +277,36 @@
 
 
 // Q18: Given a number n, find if its 2nd, 4th and 8th roots are all integers (perfect roots), return true if it exists, false if not.
-function perfectRoots(n) {
-	const secondroot = Math.sqrt(n);
-    const fourthroot = Math.sqrt(secondroot);
-    const eighthroot = Math.sqrt(fourthroot);
+// function perfectRoots(n) {
+// 	const secondroot = Math.sqrt(n);
+//     const fourthroot = Math.sqrt(secondroot);
+//     const eighthroot = Math.sqrt(fourthroot);
 
-    return Number.isInteger(secondroot) && Number.isInteger(fourthroot) && Number.isInteger(eighthroot)
+//     return Number.isInteger(secondroot) && Number.isInteger(fourthroot) && Number.isInteger(eighthroot)
+// }
+
+// console.log(perfectRoots(256)); //➞ true
+// // 2nd root of 256 is 16
+// // 4th root of 256 is 4
+// // 8th root of 256 is 2
+// console.log(perfectRoots(1000)); //➞ false
+// console.log(perfectRoots(6561)); //➞ true
+
+
+
+
+
+// Q19: You are given two numbers a and b. Create a function that returns the next number greater than a and b and divisible by b.
+function divisibleByB(a,b){
+    // Find the next multiple of b greater than a
+    const remainder = a % b;
+    const nextDivisible = remainder === 0 ? a + b : a + (b - remainder);
+    return nextDivisible;
 }
 
-console.log(perfectRoots(256)); //➞ true
-// 2nd root of 256 is 16
-// 4th root of 256 is 4
-// 8th root of 256 is 2
-console.log(perfectRoots(1000)); //➞ false
-console.log(perfectRoots(6561)); //➞ true
-
-
-
-
-
-
+console.log(divisibleByB(17, 8)); //➞ 24
+console.log(divisibleByB(98, 3)); //➞ 99
+console.log(divisibleByB(14, 11)); //➞ 22
 
 
 
