@@ -297,23 +297,40 @@
 
 
 // Q19: You are given two numbers a and b. Create a function that returns the next number greater than a and b and divisible by b.
-function divisibleByB(a,b){
-    // Find the next multiple of b greater than a
-    const remainder = a % b;
-    const nextDivisible = remainder === 0 ? a + b : a + (b - remainder);
-    return nextDivisible;
-}
+// function divisibleByB(a,b){
+//     // Find the next multiple of b greater than a
+//     const remainder = a % b;
+//     const nextDivisible = remainder === 0 ? a + b : a + (b - remainder);
+//     return nextDivisible;
+// }
 
-console.log(divisibleByB(17, 8)); //➞ 24
-console.log(divisibleByB(98, 3)); //➞ 99
-console.log(divisibleByB(14, 11)); //➞ 22
-
-
+// console.log(divisibleByB(17, 8)); //➞ 24
+// console.log(divisibleByB(98, 3)); //➞ 99
+// console.log(divisibleByB(14, 11)); //➞ 22
 
 
 
 
 
+// Q20: Create a function which takes a given number n and returns next integral perfect square number. Return null if the given number is not a perfect square.
+
+function nextSquare(n) {
+    // Calculate the square root of n
+    const sqrt = Math.sqrt(n);
+  
+    // Check if n is a perfect square
+    if (Number.isInteger(sqrt)) {
+      // Return the next perfect square
+      return Math.pow(sqrt + 1, 2);
+    } else {
+      // Return null if n is not a perfect square
+      return null;
+    }
+  }
+console.log(nextSquare(121)); //➞ 144
+console.log(nextSquare(625)); //➞ 676
+console.log(nextSquare(114)); //➞ null
+// 114 is not a perfect square
 
 
 
