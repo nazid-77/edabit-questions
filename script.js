@@ -336,32 +336,58 @@
 
 
 // Q21: Create a function that takes two numbers and a mathematical operator and returns the result.
-function calculate(num1, num2, op){
-    switch(op){
-        case "+":
-            return num1 + num2;
-        case "-":
-            return num1 - num2;
-        case "*":
-            return num1 * num2;
-        case "/":
-            return num1 / num2;
-        case "%":
-            return num1 % num2;
+// function calculate(num1, num2, op){
+//     switch(op){
+//         case "+":
+//             return num1 + num2;
+//         case "-":
+//             return num1 - num2;
+//         case "*":
+//             return num1 * num2;
+//         case "/":
+//             return num1 / num2;
+//         case "%":
+//             return num1 % num2;
         
-    }
+//     }
+// }
+// console.log(calculate(4, 9, "+")); //➞ 13
+// console.log(calculate(12, 5, "-")); //➞ 7
+// console.log(calculate(6, 3, "*")); //➞ 18
+// console.log(calculate(25, 5, "/")); //➞ 5
+// console.log(calculate(14, 3, "%")); //➞ 2
+
+
+
+
+
+// Q22: The problem is not adding. The problem is that the numbers are not in order. Create a function that organizes the numbers and adds the numbers in the range between X and Y.
+
+// Here is an example:
+
+// X = -10 | Y=1
+// So this will be the range of numbers:
+
+// -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1
+// This will be your result:
+
+// -54
+// Remember, X and Y are disorganized, so to get to the result you know what you have to do.
+
+function justAnotherSumProblem(x, y) {
+    // Ensure x is the smaller number and y is the larger number
+    const start = Math.min(x, y);
+    const end = Math.max(x, y);
+    
+    // Use the formula for the sum of an arithmetic sequence
+    const count = end - start + 1; // Total numbers in the range
+    const sum = (count * (start + end)) / 2;
+    
+    return sum;
 }
-console.log(calculate(4, 9, "+")); //➞ 13
-console.log(calculate(12, 5, "-")); //➞ 7
-console.log(calculate(6, 3, "*")); //➞ 18
-console.log(calculate(25, 5, "/")); //➞ 5
-console.log(calculate(14, 3, "%")); //➞ 2
-
-
-
-
-
-
+console.log(justAnotherSumProblem(-10, 1)); //➞ -54
+console.log(justAnotherSumProblem(-20, 5)); //➞ -195
+console.log(justAnotherSumProblem(90, 45)); //➞ 3105
 
 
 
