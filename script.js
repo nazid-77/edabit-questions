@@ -314,29 +314,48 @@
 
 // Q20: Create a function which takes a given number n and returns next integral perfect square number. Return null if the given number is not a perfect square.
 
-function nextSquare(n) {
-    // Calculate the square root of n
-    const sqrt = Math.sqrt(n);
+// function nextSquare(n) {
+//     // Calculate the square root of n
+//     const sqrt = Math.sqrt(n);
   
-    // Check if n is a perfect square
-    if (Number.isInteger(sqrt)) {
-      // Return the next perfect square
-      return Math.pow(sqrt + 1, 2);
-    } else {
-      // Return null if n is not a perfect square
-      return null;
-    }
-  }
-console.log(nextSquare(121)); //➞ 144
-console.log(nextSquare(625)); //➞ 676
-console.log(nextSquare(114)); //➞ null
+//     // Check if n is a perfect square
+//     if (Number.isInteger(sqrt)) {
+//       // Return the next perfect square
+//       return Math.pow(sqrt + 1, 2);
+//     } else {
+//       // Return null if n is not a perfect square
+//       return null;
+//     }
+//   }
+// console.log(nextSquare(121)); //➞ 144
+// console.log(nextSquare(625)); //➞ 676
+// console.log(nextSquare(114)); //➞ null
 // 114 is not a perfect square
 
 
 
 
-
-
+// Q21: Create a function that takes two numbers and a mathematical operator and returns the result.
+function calculate(num1, num2, op){
+    switch(op){
+        case "+":
+            return num1 + num2;
+        case "-":
+            return num1 - num2;
+        case "*":
+            return num1 * num2;
+        case "/":
+            return num1 / num2;
+        case "%":
+            return num1 % num2;
+        
+    }
+}
+console.log(calculate(4, 9, "+")); //➞ 13
+console.log(calculate(12, 5, "-")); //➞ 7
+console.log(calculate(6, 3, "*")); //➞ 18
+console.log(calculate(25, 5, "/")); //➞ 5
+console.log(calculate(14, 3, "%")); //➞ 2
 
 
 
