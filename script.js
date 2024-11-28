@@ -374,24 +374,36 @@
 // -54
 // Remember, X and Y are disorganized, so to get to the result you know what you have to do.
 
-function justAnotherSumProblem(x, y) {
-    // Ensure x is the smaller number and y is the larger number
-    const start = Math.min(x, y);
-    const end = Math.max(x, y);
+// function justAnotherSumProblem(x, y) {
+//     // Ensure x is the smaller number and y is the larger number
+//     const start = Math.min(x, y);
+//     const end = Math.max(x, y);
     
-    // Use the formula for the sum of an arithmetic sequence
-    const count = end - start + 1; // Total numbers in the range
-    const sum = (count * (start + end)) / 2;
+//     // Use the formula for the sum of an arithmetic sequence
+//     const count = end - start + 1; // Total numbers in the range
+//     const sum = (count * (start + end)) / 2;
     
-    return sum;
+//     return sum;
+// }
+// console.log(justAnotherSumProblem(-10, 1)); //➞ -54
+// console.log(justAnotherSumProblem(-20, 5)); //➞ -195
+// console.log(justAnotherSumProblem(90, 45)); //➞ 3105
+
+
+
+
+
+// Q23: you can convert the number into a string and then manipulate it so it returns the sum of the digits, but the point of this challenge is to see if you know how to return the sum of the digits of a two-digit number mathematically.
+function twoDigitSum(num) {
+    // Extract the tens digit and the units digit
+    const tens = Math.floor(num / 10); // Get the tens place
+    const units = num % 10; // Get the units place
+  
+    // Return the sum of the digits
+    return tens + units;
 }
-console.log(justAnotherSumProblem(-10, 1)); //➞ -54
-console.log(justAnotherSumProblem(-20, 5)); //➞ -195
-console.log(justAnotherSumProblem(90, 45)); //➞ 3105
 
-
-
-
-
-
+console.log(twoDigitSum(45)); //➞ 9
+console.log(twoDigitSum(38)); //➞ 11
+console.log(twoDigitSum(67)); //➞ 13
 
